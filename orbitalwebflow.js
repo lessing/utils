@@ -15,7 +15,7 @@ $(".fixed-background-mouse-catcher").on("mouseenter", function () {
   $(".make-navbar-transparent").click();
 });
 //
-//
+////
 ////
 
 $(".clicktest").on("mouseenter", function () {
