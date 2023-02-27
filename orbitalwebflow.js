@@ -17,6 +17,15 @@ $(".fixed-background-mouse-catcher").on("mouseenter", function () {
 //
 //
 //
+
+$(".clicktest").on("mouseenter", function () {
+  $(".close-nav-menu-overlay").addClass("shown");
+  console.log("hamburger clicked");
+  $(".nav-menu").addClass("shown");
+  $(".hamburger").removeClass("shown");
+  $(".close").addClass("shown");
+});
+
 $(".hamburger-close-button").on("mouseenter", function () {
   $(".close-nav-menu-overlay").addClass("shown");
   console.log("hamburger clicked");
