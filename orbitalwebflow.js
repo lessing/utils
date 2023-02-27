@@ -17,7 +17,7 @@ $(".fixed-background-mouse-catcher").on("mouseenter", function () {
 //
 //
 //
-$(".hamburger-close-button").on("click", function () {
+$(".hamburger-close-button").on("mouseenter", function () {
   $(".close-nav-menu-overlay").addClass("shown");
   console.log("hamburger clicked");
   $(".nav-menu").addClass("shown");
