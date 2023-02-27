@@ -14,3 +14,20 @@ $(".fixed-background-mouse-catcher").on("mouseenter", function () {
   //$(".style-navbar-symbol").removeClass("green");
   $(".make-navbar-transparent").click();
 });
+//
+//
+//
+$(".hamburger-close-button").on("click", function () {
+  $(".close-nav-menu-overlay").addClass("shown");
+  console.log("hamburger clicked");
+  $(".nav-menu").addClass("shown");
+  $(".hamburger").removeClass("shown");
+  $(".close").addClass("shown");
+});
+
+$(".close-nav-menu-overlay").on("click", function () {
+  $(".close-nav-menu-overlay").removeClass("shown");
+  $(".nav-menu").removeClass("shown");
+  $(".hamburger").addClass("shown");
+  $(".close").removeClass("shown");
+});
