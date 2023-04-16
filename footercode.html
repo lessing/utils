@@ -1,0 +1,47 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-N3WKZ5H"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe
+></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
+<script>
+  $(".testbutton").on("click", function () {
+    $(".testmodal").addClass("shown");
+  });
+  $(".testmodal").on("click", function () {
+    $(".testmodal").removeClass("shown");
+  });
+</script>
+
+<script>
+  function translateDate(o, n, l) {
+    let DateTime = luxon.DateTime;
+    let x = document.getElementsByClassName("date");
+    let i;
+    for (i = 0; i < x.length; i++) {
+      x[i].innerText = DateTime.fromFormat(x[i].innerText, o)
+        .setLocale(l)
+        .toFormat(n);
+    }
+  }
+
+  Webflow.push(function () {
+    translateDate("LLL d, yyyy", "d LLLL yyyy", "sv-SE");
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#scroll-to-top").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 800);
+      return false;
+    });
+  });
+</script>
