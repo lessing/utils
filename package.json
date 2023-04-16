@@ -1,0 +1,16 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "basic",
+  "main": "orbitalwebflow.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "lessing/utils/"
+  },
+  "author": "Simon Lessing",
+  "license": "ISC"
+}

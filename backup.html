@@ -1,3 +1,9 @@
+<!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3WKZ5H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
+
+<script>
 // Mouse entering three menu items top middle
 $(".navbartext").on("mouseenter", function () {
   //If the navbar is white, set a flag to remember this
@@ -20,15 +26,16 @@ $(".hamburger-close-button").on("click", function () {
   if (navmenuopen) {
     console.log(navmenuopen);
     $(".drop-down-background").removeClass("shown");
-    $(".hamburger-menu-drill-down-content").css("display", "none");
+    $('.hamburger-menu-drill-down-content').css('display', 'none');
     $(".style-navbar-symbol").removeClass("green");
     $(".fixed-background-mouse-catcher").removeClass("shown");
     $(".nav-menu").removeClass("shown");
     $(".navbartext").removeClass("active");
-    $(".navbarrighttext").addClass("shown");
-    $(".hamburger-icon").addClass("shown");
+		$(".navbarrighttext").addClass("shown");
+		$(".hamburger-icon").addClass("shown");
     $(".close").removeClass("shown");
     navmenuopen = false;
+
   } else {
     console.log(navmenuopen);
     $(".drop-down-background").removeClass("shown");
@@ -43,7 +50,7 @@ $(".hamburger-close-button").on("click", function () {
     if ($(window).width() < 992) {
       $(".style-navbar-symbol").addClass("green");
     }
-
+    
     navmenuopen = true;
   }
 });
@@ -55,7 +62,7 @@ $(".fixed-background-mouse-catcher").on("mouseenter", function () {
   $(".fixed-background-mouse-catcher").removeClass("shown");
   $(".nav-menu").removeClass("shown");
   $(".navbartext").removeClass("active");
-  $(".navbarrighttext").addClass("shown");
+  	$(".navbarrighttext").addClass("shown");
 
   $(".hamburger").addClass("shown");
   $(".close").removeClass("shown");
@@ -114,8 +121,35 @@ if (lastClass !== "white") {
     trigger: ".hero",
     endTrigger: ".footer",
 
+    
     onUpdate: (self) => {
       $(".style-navbar-symbol").removeClass("white");
     },
   });
 }
+
+</script>
+
+<script>
+function translateDate(o,n,l) {
+	let DateTime = luxon.DateTime
+	let x = document.getElementsByClassName("date");
+	let i;
+	for (i = 0; i < x.length; i++) {
+    x[i].innerText = DateTime.fromFormat(x[i].innerText, o).setLocale(l).toFormat(n);
+    }
+}
+
+Webflow.push(function() {
+translateDate("LLL d, yyyy","d LLLL yyyy","sv-SE")
+});
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('#scroll-to-top').click(function() {
+      $('html, body').animate({ scrollTop: 0 }, 800);
+      return false;
+    });
+  });
+ </script>
