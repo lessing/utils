@@ -5,7 +5,9 @@
   "main": "orbitalwebflow.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "serve"
+    "serve": "serve",
+    "tv:setup": "npm exec --yes --package=@webos-tools/cli -c 'ares-setup-device && ares-novacom --device tv --getkey'",
+    "tv:deploy": "npm exec --yes --package=@webos-tools/cli -c 'mkdir -p lg-home/dist && ares-package lg-home/app -o lg-home/dist && ares-install -d tv lg-home/dist/*.ipk && ares-launch -d tv com.lessing.tvhome'"
   },
   "repository": {
     "type": "git",

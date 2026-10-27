@@ -1,0 +1,13 @@
+{
+  "id": "com.lessing.tvhome",
+  "version": "0.1.0",
+  "vendor": "Lessing",
+  "type": "web",
+  "main": "index.html",
+  "title": "My Home",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "iconColor": "#1d1033",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true
+}
